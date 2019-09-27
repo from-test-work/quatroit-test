@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=cyrillic');
+@font-face {
+  font-family: 'Roboto-Thin';
+  src: url('../../fonts/Roboto-Thin.eot');
+  src: url('../../fonts/Roboto-Thin.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/Roboto-Thin.woff2') format('woff2'),
+       url('../../fonts/Roboto-Thin.woff') format('woff'),
+       url('../../fonts/Roboto-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face { font-family: 'Roboto-Thin';  src: local('Roboto-Thin'), url('https://nomail.com.ua/files/woff/3f68500b267c20051088bcc0698af773.woff') format('woff'); }
+
+$Roboto: 'Roboto', sans-serif;
+$Roboto-Thin: 'Roboto-Thin', sans-serif;

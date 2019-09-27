@@ -1,0 +1,191 @@
+$cnt-width: 447px;
+
+.header {
+  background: lightcoral url('../../../img/content/section-bg-01.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  //height: 100vh;
+  padding: rem(30) 0 rem(45);
+  position: relative;
+  .container {
+    max-width: 1208px;
+    //max-width: initial;
+  }
+
+  &__top {
+    display: flex;
+  }
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: rem(66);
+  }
+
+  a[href^='tel'], a[href^='mailto'] {
+    color: $red;
+    line-height: 1;
+    text-decoration: none;
+  }
+  a[href^='tel'] {
+    font-size: rem(35);
+  }
+  a[href^='mailto'] {
+    font-size: rem(20);
+  }
+}
+
+.header {
+  &__asside {
+    width: calc(100% - #{$cnt-width});
+  }
+  &__cnt {
+    width: rem(447);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__block {
+    width: rem(736);
+  }
+  &__form {
+    padding-right: rem(52);
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    color: $red;
+    line-height: 1;
+    padding-left: 10px;
+
+    span:nth-child(1) {
+      font-size: rem(22);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: rem(-0.15);
+    }
+
+    span:nth-child(2) {
+      margin-top: rem(8);
+      font-size: rem(30);
+      font-weight: 300;
+    }
+    span:nth-child(3) {
+      margin-top: rem(11);
+      font-size: rem(50);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+  &__description {
+    color: $white;
+    font-size: rem(25);
+    text-align: right;
+    text-transform: uppercase;
+  }
+
+}
+
+.header {
+  * + &__description {
+    margin-top: rem(32);
+  }
+
+  * + a[href^='tel'] {
+    margin-top: rem(13);
+  }
+
+  * + a[href^='mailto'] {
+    margin-top: rem(3);
+  }
+
+  * + .btn {
+    margin-top: rem(30);
+  }
+
+  * + .achievement-list {
+    margin-top: rem(92);
+    margin-left: rem(-10);
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .header {
+    &__main{
+      flex-direction: column;
+    }
+    &__block {
+      width: 100%;
+    }
+    &__form {
+      margin: rem(50) auto;
+      padding-right: 0;
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .header {
+    &__top{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__asside{
+      width: auto;
+    }
+    &__cnt {
+      width: 100%;
+      align-items: center;
+    }
+    &__description{
+      text-align: center;
+    }
+    &__title{
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    &__title {
+      span:nth-child(1), span:nth-child(2) {
+        font-size: rem(18);
+        font-weight: 700;
+        line-height: rem(20);
+        text-transform: none;
+        text-align: center;
+        display: inline-flex;
+      }
+
+      span:nth-child(2) {
+        margin-top: 0;
+      }
+      span:nth-child(3){
+        font-size: rem(40);
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .header {
+    a[href^='tel'] {
+      font-size: rem(24);
+    }
+    a[href^='mailto'] {
+      font-size: rem(18);
+    }
+  }
+}
+
+
+
+
+@media screen and (max-width: 1199px) {}
+@media screen and (max-width: 991px) {}
+@media screen and (max-width: 767px) {}
+@media screen and (max-width: 540px) {}

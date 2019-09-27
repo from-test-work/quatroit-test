@@ -1,0 +1,175 @@
+$form--fsz: inherit !default;
+$form--lh: 1.2;
+$form--fw: inherit !default;
+$form--color: rgba(1, 1, 1, 0.5) !default;
+$form--border-sise: 1px !default;
+$form--border: $form--border-sise solid $form--color !default;
+$form--border-radius: 4px;
+// input style
+$form-input--height: 43px !default;
+$form-input--line-height: 40px !default;
+$form-input--padding-left: 30px !default;
+$form-input--padding-right: 10px !default;
+// textarea style
+$form-textarea--height: 114px !default;
+// icon validate style
+$form-validationIcon--width: 5px;
+$form-validationIcon--height: 8px;
+$form-validationIcon--pull-right: 5px;
+$form-validationIcon--pull-left: 15px;
+
+$background: $white;
+
+.form-group {
+  position: relative;
+
+  &.has-validcon-left {
+    .form-input {
+      padding-left: calc(#{$form-validationIcon--width} + (#{$form-validationIcon--pull-left} * 2));
+    }
+  }
+
+  label {
+    display: block;
+    position: relative;
+    .form-validationText {
+      position: absolute;
+      display: block;
+      width: 100%;
+      bottom: -16px;
+    }
+    //.form-validationIcon-left {
+    //  position: absolute;
+    //  top: 50%;
+    //  width: 0;
+    //  height: 0;
+    //  border-top: 5px solid transparent;
+    //  border-left: 8px solid $red;
+    //  border-bottom: 5px solid transparent;
+    //  display: block;
+    //  transform: translateY(-50%);
+    //  z-index: 1;
+    //  &:before{
+    //    position: absolute;
+    //    content: '';
+    //    top: 50%;
+    //    left: -10px;
+    //    width: 0;
+    //    height: 0;
+    //    border-top: 5px solid transparent;
+    //    border-left: 8px solid $white;
+    //    border-bottom: 5px solid transparent;
+    //    display: block;
+    //    transform: translateY(-50%);
+    //    z-index: 2;
+    //  }
+    //}
+
+    .form-validationIcon-left {
+      left: $form-validationIcon--pull-left;
+    }
+  }
+
+  //input styles
+  .form-input {
+    display: block;
+    text-align: left;
+    outline: none;
+    width: 100%;
+    background: $background;
+    border: $form--border;
+    height: $form-input--height;
+    padding-left: $form-input--padding-left;
+    padding-right: $form-input--padding-right;
+    -webkit-appearance: none;
+    border-radius: $form--border-radius;
+  }
+  .form-textarea {
+    display: block;
+    overflow: auto;
+    outline: none;
+    width: 100%;
+    padding: 13px 10px 13px 30px;
+    resize: none;
+    height: $form-textarea--height;
+    font-size: $form--fsz;
+    line-height: $form--lh;
+    font-weight: $form--fw;
+    border: $form--border;
+    border-radius: $form--border-radius;
+    -webkit-appearance: none;
+  }
+}
+
+.input-icon_left{
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: $red;
+  top: 50%;
+  transform: translateY(-50%)rotate(45deg);
+  left: 13px;
+  &:before{
+    position: absolute;
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: $white;
+    left: -1px;
+    top: 1px;
+  }
+}
+
+.textarea-icon_left{
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: $red;
+  top: 21px;
+  transform: translateY(-50%)rotate(45deg);
+  left: 13px;
+  &:before{
+    position: absolute;
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: $white;
+    left: -1px;
+    top: 1px;
+  }
+}
+
+.form-group + .form-group{
+  margin-top: rem(7);
+}
+
+.form-group + *{
+  margin-top: 37px;
+}
+
+//placeholder-overflow
+.placeholder-overflow{
+  input[placeholder]{text-overflow:ellipsis;}
+  input::-moz-placeholder{text-overflow:ellipsis;}
+  input:-moz-placeholder{text-overflow:ellipsis;}
+  input:-ms-input-placeholder{text-overflow:ellipsis;}
+}
+
+//placeholder-color
+.placeholder-color{
+  ::-webkit-input-placeholder {color:$black;}
+  ::-moz-placeholder{color:$black;}
+  :-moz-placeholder{color:$black;}
+  :-ms-input-placeholder{color:$black;}
+}
+
+.placeholder-effect2{
+  ::-webkit-input-placeholder{opacity: 1; transition: opacity 0.3s ease;}
+  ::-moz-placeholder{opacity: 1; transition: opacity 0.3s ease;}
+  :-moz-placeholder{opacity: 1; transition: opacity 0.3s ease;}
+  :-ms-input-placeholder{opacity: 1; transition: opacity 0.3s ease;}
+  :focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+  :focus::-moz-placeholder{opacity: 0; transition: opacity 0.3s ease;}
+  :focus:-moz-placeholder{opacity: 0; transition: opacity 0.3s ease;}
+  :focus:-ms-input-placeholder{opacity: 0; transition: opacity 0.3s ease;}
+}

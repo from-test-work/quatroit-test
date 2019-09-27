@@ -1,0 +1,27 @@
+include ../../components/btn/btn
+
+mixin event-block(data)
+    .event-block.event-block_vertical
+        span.event-block__indent-front
+        span.event-block__indent-back
+
+        .event-block__wrapp.event-block__wrapp_header
+            .event-block__cnt
+                .event-block__text Нужен срочный перевод контракта или делового письма? Переговоры с иностранными партнерами перенесли на  сегодняшний вечер, а под рукой  нет переводчика?
+                .event-block__title Решите задачу сейчас:
+
+                form.form(name='fastTranslate',
+                    method='POST',
+                    data-netlify-recaptcha='true',
+                    data-netlify='true')
+                    .form-group
+                        label
+                            input.form-input(type='text' name='name' placeholder='Введите имя:')
+                            span.input-icon.input-icon_left
+                    .form-group
+                        label
+                            input.form-input(type='tel' name='phone' placeholder='Введите телефон:')
+                            span.input-icon.input-icon_left
+                    div(data-netlify-recaptcha='true')
+                    div
+                        button.btn(type='submit' ) Нужен срочный перевод

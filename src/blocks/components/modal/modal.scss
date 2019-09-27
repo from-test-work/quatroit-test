@@ -1,0 +1,59 @@
+body.modal-is-open {
+  overflow: hidden !important;
+}
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+  padding: rem(32);
+  background: rgba($black, 0.6);
+  z-index: 101;
+  &.is-open {
+    overflow-y: auto;
+  }
+}
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+  margin: auto;
+}
+
+
+// modal-form
+.modal-form {
+  background: $white;
+  width: rem(400);
+  height: auto;
+  padding: rem(55) rem(80) rem(70);
+  &__title {
+    justify-self: flex-start;
+    position: relative;
+    color: $red;
+    font-size: rem(22);
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: rem(0.2);
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: rem(-20);
+      height: 2px;
+      width: 100%;
+      background: currentColor;
+    }
+  }
+
+  > * {
+    max-width: rem(230);
+  }
+
+  &__title + * {
+    margin-top: rem(45);
+  }
+}

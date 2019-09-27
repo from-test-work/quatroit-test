@@ -1,0 +1,150 @@
+.analyze-bg{
+  padding: rem(56) 0;
+}
+
+.analyze{
+  .container{
+    max-width: 1190px;
+  }
+  &__title{
+    display: flex;
+    flex-direction: column;
+    color: $red;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 43px;
+  }
+  &__title-subtext{
+    font-size: 35px;
+  }
+  &__description-cnt {
+    position: relative;
+    margin: 26px 0 39px;
+    color: lighten($black, 20.00);
+    font-size: 18px;
+    letter-spacing: -0.42px;
+    > p + p{
+      margin-top: 22px;
+    }
+  }
+  &__delimiter{
+    width: 410px;
+    border: 1px solid lighten($black, 60.00);
+  }
+}
+
+.analyze{
+  * + .analyze__description{
+    margin-top: 35px;
+  }
+}
+
+.analyze-list{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+
+  &__item{
+    width: 339px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__brand{
+    min-height: 118px;
+    display: flex;
+    align-items: center;
+  }
+  &__text{
+    min-height: 80px;
+    padding: 0 10px;
+    color: lighten($black, 20.00);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+  }
+  &__diagram{
+    margin-left: 10px;
+    max-width: 100%;
+  }
+}
+
+.analyze-list{
+  * + &{
+    margin: 15px -15px 0;
+  }
+  * + &__text{
+    margin-top: 22px;
+  }
+  * + &__diagram{
+    margin-top: 65px;
+  }
+}
+
+
+@media screen and (max-width: 1199px) {
+  .analyze{
+
+  }
+  .analyze-list{
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 991px) {
+  .analyze{
+    &__title{
+      font-size: 40px;
+      //font-weight: 300;
+      //line-height: 43px;
+    }
+    &__title-subtext{
+      font-size: 20px;
+    }
+    &__description-cnt{
+      margin: 15px 0;
+      font-size: 14px;
+    }
+    & * + &__description{
+      margin-top: 15px;
+    }
+  }
+  .analyze-list{
+    &__text{
+      font-size: 16px;
+    }
+    &__item{
+      width: 340px;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .analyze{
+
+  }
+  .analyze-list{
+    justify-content: center;
+    &__item{
+      width: 340px;
+      padding: 25px;
+    }
+  }
+}
+@media screen and (max-width: 540px) {
+  .analyze{
+    &__delimiter{
+      width: 100%;
+    }
+  }
+  .analyze-list{
+    justify-content: center;
+    &__item{
+      width: 100%;
+    }
+  }
+}

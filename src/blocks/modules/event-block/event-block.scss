@@ -1,0 +1,161 @@
+$indent: 17px;
+$length: 15px;
+$length-border: 13px;
+
+.event-block {
+  position: relative;
+
+  &_vertical-absolute{
+    position: absolute;
+    bottom: 82px;
+    right: 113px;
+  }
+
+  &_vertical {
+    width: rem(282);
+    height: rem(468);
+    box-shadow: 0px 10px 10px 0px rgba(1, 2, 2, 0.5);
+  }
+
+
+  &__indent-front {
+    position: relative;
+    display: block;
+    top: 1px;
+    height: $indent;
+
+    &:before, &:after {
+      position: absolute;
+      content: '';
+      border-bottom: $indent solid $white;
+      height: 0;
+      z-index: 2;
+    }
+
+    &:before {
+      left: 1px;
+      top: 2px;
+      border-left: 0 solid transparent;
+      border-right: $length solid transparent;
+      width: 50%;
+
+    }
+
+    &:after {
+      right: 1px;
+      top: 2px;
+      border-left: $length solid transparent;
+      border-right: 0 solid transparent;
+      width: 49.99%;
+    }
+  }
+
+  &__indent-back {
+    position: relative;
+    display: block;
+    top: 1px;
+    height: $length;
+
+    &:before, &:after {
+      position: absolute;
+      content: '';
+      top: calc((#{-$length} - 1px));
+      border-bottom: calc(#{$length} + 1px) solid $red;
+      height: 0;
+      width: 50%;
+      z-index: 1;
+    }
+
+    &:before {
+
+      left: 0;
+
+      border-left: 0 solid transparent;
+      border-right: 14px solid transparent;
+    }
+
+    &:after {
+      right: 0;
+      border-left: 14px solid transparent;
+      border-right: 0 solid transparent;
+    }
+  }
+
+  &__wrapp {
+    position: absolute;
+    top: $indent;
+    width: 100%;
+    height: 100%;
+    background: $white;
+    border-left: 1px solid $red;
+    border-bottom: 1px solid $red;
+    border-right: 1px solid $red;
+
+    &_header {
+      padding: rem(34) rem(22) rem(29);
+    }
+    &_header2{
+      padding: rem(69) rem(22) rem(29);
+    }
+    &_header3 {
+      padding: rem(37) rem(22) rem(29);
+    }
+  }
+
+  &__title {
+    color: $red;
+    font-size: rem(22);
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: rem(0.2);
+    &-mod{
+      font-size: 20px;
+      line-height: 23.99px;
+    }
+  }
+
+  &__text {
+    font-weight: 300;
+    line-height: rem(26);
+    letter-spacing: rem(-0.7);
+  }
+
+  &__footer-title{
+    color: lighten($black, 20.00);
+    font-size: 25px;
+    font-weight: 500;
+  }
+  &__footer-text{
+    margin-top: 20px;
+    color: $red;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 23.99px;
+  }
+
+  .form {
+    padding-right: 4px;
+    input, textarea {
+      font-size: rem(14);
+      letter-spacing: -0.1px;
+    }
+  }
+
+
+
+}
+
+.event-block {
+  &__text + &__title {
+    margin-top: rem(23);
+  }
+  * + .form{
+    margin-top: 31px;
+  }
+  * + .form2{
+    margin-top: 78px;
+  }
+  * + .form3{
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,101 @@
+.recomendation-mark-bg{
+  position: relative;
+  padding: 44px 0 29px;
+  &:before{
+    position: absolute;
+    content: '';
+    left: 50%;
+    bottom: -14px;
+    width: 0;
+    height: 0;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    border-top: 14px solid $white;
+    transform: translateX(-50%);
+  }
+}
+.recomendation-mark{
+  display: flex;
+  flex-direction: column;
+  &__title{
+    display: flex;
+    justify-content: center;
+    color: $red;
+    font-weight: 300;
+    line-height: 1;
+  }
+  &__persent{
+    font-size: 130px;
+    padding-left: 8px;
+  }
+  &__delimetr{
+    display: flex;
+    flex-direction: column;
+
+  }
+  &__first{
+    font-size: 50px;
+    margin-top: 3px;
+  }
+  &__second{
+    font-size: 32px;
+    margin-top: -7px;
+  }
+  &__question{
+    margin-top: 11px;
+    color: $red;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0.09px;
+  }
+}
+
+.recomendation-mark{
+  &__persent + &__delimetr{
+    margin-left: 50px;
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  .recomendation-mark{
+
+  }
+}
+@media screen and (max-width: 991px) {
+  .recomendation-mark{
+    &__title{
+      flex-direction: column;
+      align-items: center;
+    }
+    &__persent{
+      padding-left: 0;
+    }
+    &__delimetr{
+      text-align: center;
+    }
+    &__persent + &__delimetr {
+      margin-left: 0;
+
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .recomendation-mark{
+    &__persent{
+      font-size: 100px;
+    }
+    &__first{
+      font-size: 40px;
+    }
+    &__second {
+      font-size: 24px;
+      margin-top: 0;
+    }
+  }
+}
+@media screen and (max-width: 540px) {
+  .recomendation-mark{
+
+  }
+}

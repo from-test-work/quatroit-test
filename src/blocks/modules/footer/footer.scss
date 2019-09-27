@@ -1,0 +1,128 @@
+#map{
+  width: 100%;
+  height: 565px;
+  background: lightcyan;
+}
+
+.footer{
+  &__wrapp{
+    .container{
+      position: relative;
+      max-width: 1190px;
+    }
+  }
+}
+
+.footer{
+  &__wrapp{
+    background: $red;
+    height: 33px;
+  }
+  &__cnt{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__brand{
+    color: $white;
+    font-size: 20px;
+    line-height: 36px;
+  }
+  &__product-by{
+    margin-right: 56px;
+    color: $white;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 36px;
+  }
+}
+
+
+.footer-social{
+  display: flex;
+  margin: 7px 0 7px 82px;
+  padding: 0;
+  list-style-type: none;
+  &__item{
+    width: 20px;
+    height: 20px;
+    background: $white;
+    border-radius: 50%;
+    margin: 0 2px;
+  }
+  &__link{
+    display: flex;
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  &__img{
+    width: 16px;
+  }
+}
+
+.footer-contact{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  bottom: 170px;
+  right: 421px;
+
+  a[href^='tel'],
+  a[href^='mailto']{
+    display: block;
+    color: $red;
+    text-decoration: none;
+  }
+
+  a[href^='tel'] {
+    font-size: 25px;
+    font-weight: 500;
+  }
+  a[href^='mailto'] {
+    font-size: 22px;
+    margin-top: 4px;
+  }
+  address{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    color: $red;
+    font-size: 22px;
+    font-style: normal;
+    line-height: 25px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 1199px) {}
+@media screen and (max-width: 991px) {
+  .footer-contact{
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer{
+    &__wrapp{
+      height: auto;
+    }
+    &__cnt{
+      flex-direction: column;
+      align-items: center;
+    }
+    &-social{
+      margin: 7px 0;
+    }
+  }
+  .event-block_vertical-absolute{
+    bottom: 180px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .event-block_vertical-absolute{
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+

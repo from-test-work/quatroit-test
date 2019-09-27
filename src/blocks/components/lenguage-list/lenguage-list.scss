@@ -1,0 +1,28 @@
+.language-list{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  //max-width: rem(257);
+  &__item{
+    margin-top: rem(-2);
+  }
+  &__link{
+    color: darken($white, 20.00);
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 300;
+  }
+  &__link.active{
+    font-weight: 700;
+    color: $white;
+  }
+}
+
+.language-list{
+  &__item + *{
+    margin-left: rem(22);
+  }
+}

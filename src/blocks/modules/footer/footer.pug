@@ -1,0 +1,36 @@
+include ../../modules/event-block3/event-block3
+
+mixin footer(data)
+    footer.footer
+        #map
+        .footer__wrapp
+            .container
+                +event-block3
+                .footer-contact
+                    a(href='tel:+74952239226') +7 (495) 223 92 26
+                    a(href='mailto:info@buro-eclipse.ru') info@buro–eclipse.ru
+                    address
+                        span Москва
+                        span Строительный проезд, 7А, к. 1, оф. 2
+                .footer__cnt
+                    .footer__brand Eclipse
+                    ul.footer-social
+                        li.footer-social__item
+                            a.footer-social__link(href='#')
+                                img.footer-social__img(src='../../../img/social/vk-v.png' alt='vk')
+                        li.footer-social__item
+                            a.footer-social__link(href='#')
+                                img.footer-social__img(src='../../../img/social/facebook.png' alt='facebook')
+                        li.footer-social__item
+                            a.footer-social__link(href='#')
+                                img.footer-social__img(src='../../../img/social/twitter.png' alt='twitter')
+                        li.footer-social__item
+                            a.footer-social__link(href='#')
+                                img.footer-social__img(src='../../../img/social/google.png' alt='google')
+                        li.footer-social__item
+                            a.footer-social__link(href='#')
+                                img.footer-social__img(src='../../../img/social/ok.png' alt='odnoklasniki')
+
+                    .footer__product-by Разработано в
+
+

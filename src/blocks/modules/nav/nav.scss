@@ -1,0 +1,41 @@
+.navigation{
+  .container{
+    max-width: 1212px;
+  }
+}
+
+nav{}
+.nav-list{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  display: flex;
+  justify-content: flex-end;
+  &__item{
+
+  }
+  &__item.active{
+    .nav-list__link{
+      color: $red;
+    }
+  }
+  &__link{
+    color: lighten($black, 20.00);
+    font-size: 15px;
+    line-height: 50px;
+    letter-spacing: 0.01px;
+    text-decoration: none;
+  }
+}
+.nav-list{
+  &__item + *{
+    margin-left: 59px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .navigation{
+    display: none;
+  }
+}

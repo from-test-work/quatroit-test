@@ -1,0 +1,19 @@
+include ../grid/grid
+include ../../modules/event-block2/event-block2
+
+mixin masonry(data)
+    .masonry
+        .visible
+            h2.masonry__title 7 причин
+                span обратиться в Eclipse,
+                span если вы ищите устного&nbsp;переводчика
+            .masonry__description В Eclipse вам подберут квалифицированного&nbsp;переводчика для любой ситуации
+        +grid()
+        .masonry__asside
+            .hidden
+                h2.masonry__title 7 причин
+                    span обратиться в Eclipse,
+                    span если вы ищите устного&nbsp;переводчика
+                .masonry__description В Eclipse вам подберут квалифицированного&nbsp;переводчика для любой ситуации
+            .position
+                +event-block2

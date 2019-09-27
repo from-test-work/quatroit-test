@@ -1,0 +1,75 @@
+.banner-bg{
+  background: lightcoral url('../../../img/content/section-bg-02.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 48px 0;
+  .container{
+    max-width: 1212px;
+  }
+}
+
+.banner{
+  display: flex;
+  justify-content: flex-end;
+  blockquote{
+    margin-block-start: 11px;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 680px;
+  }
+  &__text{
+    margin: 0;
+    text-align: center;
+    color: darken(saturate(adjust-hue($white, 70), 12.00), 9.80);
+    font-size: 20px;
+    font-weight: 300;
+  }
+  &__text-end{
+    color: darken(saturate(adjust-hue($white, 70), 12.00), 9.80);
+    text-align: center;
+    font-family: $Roboto-Thin;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1;
+  }
+}
+
+.banner{
+  &__text + &__text{
+    margin-top: 28px;
+  }
+  &__text + *{
+    margin-top: 35px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .banner-bg{
+    background-position: 36% top;
+  }
+  .banner{
+    blockquote {
+      margin-block-start: 0;
+    }
+    &__text{
+      font-weight: inherit;
+      font-size: 18px;
+    }
+  }
+}
+@media screen and (max-width: 540px) {
+  .banner{
+    &__text{
+      font-size: 12px;
+    }
+    &__text-end{
+      font-size: 26px;
+    }
+  }
+}

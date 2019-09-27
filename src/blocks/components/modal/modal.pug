@@ -1,0 +1,28 @@
+mixin modal(data)
+    .modal-wrapper
+        #modal.modal
+            .modal__close
+            .modal__content
+                .modal__form.modal-form
+                    .modal-form__title Заполните форму
+
+                    form.form(name='callSend',
+                        autocomplete='off'
+                        method='POST',
+                        data-netlify-recaptcha='true',
+                        data-netlify='true')
+                        .form-group
+                            label
+                                input.form-input(type='text' name='name' placeholder='Введите имя и фамилию:')
+                                span.input-icon.input-icon_left
+                        .form-group
+                            label
+                                input.form-input(type='tel' name='phone' placeholder='Введите номер телефона:')
+                                span.input-icon.input-icon_left
+                        .form-group
+                            label
+                                input.form-input(type='email' name='email' placeholder='Введите e-mail:')
+                                span.input-icon.input-icon_left
+                        div(data-netlify-recaptcha='true')
+                        div
+                            button.btn(type='submit') Заказать звонок

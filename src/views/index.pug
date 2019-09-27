@@ -1,0 +1,86 @@
+extends layouts/default
+include helpers/mixins
+include ../blocks/modules/header/header
+include ../blocks/modules/nav/nav
+include ../blocks/modules/banner/banner
+include ../blocks/components/achievement-list/achievement-list
+include ../blocks/components/advantages-list/advantages-list
+include ../blocks/components/recomendation/recomendation
+include ../blocks/components/recomendation-mark/recomendation-mark
+include ../blocks/components/analyze-list/analyze-list
+include ../blocks/components/technology/technology
+include ../blocks/components/grid/grid
+include ../blocks/components/translator/translator
+include ../blocks/components/masonry/masonry
+
+include ../blocks/modules/load-block/load-block
+include ../blocks/modules/footer/footer
+
+include ../blocks/components/modal/modal
+
+block variables
+    - const title = "eclipse"
+
+block content
+    .page
+        a#toggle(href='#menu')
+            span
+        #menu
+            ul
+                li
+                    a(href='#') Главная
+                li
+                    a(href='#') Письменные переводы
+                li
+                    a(href='#') Устные переводы
+                li
+                    a(href='#') Контакты
+
+        +header()
+        section(class='navigation')&attributes(attributes)
+            +nav()
+        section(class='banner-bg')&attributes(attributes)
+            .container
+                +banner()
+        section(class='technology-bg')&attributes(attributes)
+            .container
+                +technology()
+        section(class='advantages-bg')&attributes(attributes)
+            .container
+                .advantages
+                    h2.advantages__title Оцените 3 преимущества, <br> которые вы получаете в результате:
+                    +advantages-list()
+                    button.btn(data-open="false") Заказать перевод
+
+
+        section(class='recomendation-mark-bg')&attributes(attributes)
+            +recomendation-mark
+        section(class='recomendation')&attributes(attributes)
+            .recomendation-bg
+                .container
+                    +recomendation
+                    +load-block
+        section(class='analyze-bg')&attributes(attributes)
+            .analyze
+                .container
+                    h2.analyze__title Анализ
+                        span.analyze__title-subtext изменения стоимости для наших заказчиков
+
+                    .analyze__description
+                        .analyze__delimiter
+                        .analyze__description-cnt
+                            p Мы провели для вас анализ 3-х текстов наших заказчиков, работающих в разных отраслях.
+                            p Даже при одинаковом объеме текстов стоимость перевода будет разной. Чем чаще повторяются фразы в документах, тем больше экономия.
+                        .analyze__delimiter
+                    +analyze-list()
+        section(class='masonry-bg')&attributes(attributes)
+            .container
+                +masonry
+        section(class='translator-bg')&attributes(attributes)
+            .container
+                +translator()
+        +footer()
+    +modal
+block scripts
+    script(src="../js/main.js")
+    script(src="../js/vendor.js")

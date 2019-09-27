@@ -1,0 +1,59 @@
+.achievement-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 3);
+    margin: rem(13) 0;
+  }
+
+  &__img {
+  }
+
+  &__description {
+    text-align: center;
+    font-size: rem(18);
+    line-height: rem(20);
+    font-weight: 500;
+  }
+}
+
+.achievement-list {
+  * + &__description {
+    margin-top: rem(12);
+  }
+}
+
+
+@media screen and (max-width: 1199px) {
+  .achievement-list {
+    &__item{
+      width: rem(320);
+    }
+    &__description{
+      padding: 0 rem(30);
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .achievement-list {
+    justify-content: center;
+    &__item{
+      width: rem(320);
+      justify-content: space-around;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+
+}

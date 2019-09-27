@@ -1,0 +1,41 @@
+include ../../components/file-loader/file-loader
+
+mixin load-block(data)
+    .load-block
+        .load-block__indent
+            .load-block__indent-frontf
+            .load-block__indent-fronts
+
+            .load-block__indent-backf
+            .load-block__indent-backs
+        .load-block__wrapp
+            .load-block__cnt
+                .load-block__about
+                    .load-block__title Узнайте, как быстро будут переведены ваши документы.
+                    .load-block__text Загрузите необходимый файл, и наши специалисты сообщат вам ответ в течение 5 минут.
+                form.form.form-load(name='fastTranslate',
+                    method='POST',
+                    data-netlify-recaptcha='true',
+                    data-netlify='true')
+                    .form-item
+                        .form-group
+                            label
+                                input.form-input(type='text' name='name' placeholder='Введите имя:')
+                                span.input-icon.input-icon_left
+                        .form-group
+                            label
+                                input.form-input(type='tel' name='phone' placeholder='Введите телефон:')
+                                span.input-icon.input-icon_left
+                        .form-group
+                            label
+                                input.form-input(type='email' name='email' placeholder='Введите e-mail:')
+                                span.input-icon.input-icon_left
+                        div(data-netlify-recaptcha='true')
+                    .form-item
+                        .form-input-wrapp.loadFile
+                            input#files(type='file', name='file')
+                            label(for='files')
+                                span Загрузить файл
+                            +file-loader
+                        div
+                            button.btn.load-btn(type='submit') Отправить

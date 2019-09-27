@@ -1,0 +1,29 @@
+mixin event-block3(data)
+    .event-block.event-block_vertical.event-block_vertical-absolute
+        span.event-block__indent-front
+        span.event-block__indent-back
+
+        .event-block__wrapp.event-block__wrapp_header3
+            .event-block__cnt
+                .event-block__title.event-block__footer-title Остались&nbsp;вопросы?
+                .event-block__title.event-block__footer-text Задайте их нашему&nbsp;консультанту:
+
+                form.form.form3(name='fastTranslate',
+                    method='POST',
+                    data-netlify-recaptcha='true',
+                    data-netlify='true')
+                    .form-group
+                        label
+                            input.form-input(type='text' name='name' placeholder='Введите имя:')
+                            span.input-icon.input-icon_left
+                    .form-group
+                        label
+                            input.form-input(type='email' name='email' placeholder='Введите e-mail:')
+                            span.input-icon.input-icon_left
+                    .form-group
+                        label
+                            textarea.form-textarea( placeholder='Ваш вопрос:')
+                            span.input-icon.textarea-icon_left
+                    div(data-netlify-recaptcha='true')
+                    div
+                        button.btn(type='submit') Заказать устный перевод

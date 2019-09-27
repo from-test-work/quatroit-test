@@ -1,0 +1,28 @@
+mixin event-block2(data)
+    .event-block.event-block_vertical
+        span.event-block__indent-front
+        span.event-block__indent-back
+
+        .event-block__wrapp.event-block__wrapp_header2
+            .event-block__cnt
+                .event-block__title.event-block__title-mod Мы предложим вам лучшее решение для вашей задачи:
+
+                form.form.form2(name='fastTranslate',
+                    method='POST',
+                    data-netlify-recaptcha='true',
+                    data-netlify='true')
+                    .form-group
+                        label
+                            input.form-input(type='text' name='name' placeholder='Введите имя:')
+                            span.input-icon.input-icon_left
+                    .form-group
+                        label
+                            input.form-input(type='tel' name='phone' placeholder='Введите телефон:')
+                            span.input-icon.input-icon_left
+                    .form-group
+                        label
+                            input.form-input(type='email' name='email' placeholder='Введите e-mail:')
+                            span.input-icon.input-icon_left
+                    div(data-netlify-recaptcha='true')
+                    div
+                        button.btn(type='submit') Заказать устный перевод

@@ -1,0 +1,31 @@
+include ../../components/brand/brand
+include ../../components/lenguage-list/lenguage-list
+include ../../components/achievement-list/achievement-list
+
+include ../event-block/event-block
+
+mixin header(data)
+    header.header
+        .container
+            .header__top
+                .header__asside
+                    +brand
+                .header__cnt
+                    +language-list
+
+                    .header__description Письменные и устные переводы<br>для вашего бизнеса
+
+                    a(href='tel:+74952239226') +7 /495/ 223 92 26
+                    a(href='mailto:info@buro-eclipse.ru') info@buro-eclipse.ru
+                    button.btn(data-open="false") Обратный звонок
+            .header__main
+                .header__block
+                    h1.header__title
+                        span Экономьте до 70% бюджета на перевод
+                        span при помощи технологии
+                        span Translation Memory
+                    //.header__info-item
+                    +achievement-list
+                .header__form
+                    +event-block
+

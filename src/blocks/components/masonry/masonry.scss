@@ -1,0 +1,113 @@
+.masonry-bg{
+  padding: 46px 0 53px;
+  .container{
+    max-width: 1190px;
+  }
+}
+
+.masonry{
+  display: flex;
+  justify-content: space-between;
+  .grid{
+    width: calc(100% - 326px);
+  }
+  &__asside{
+    width: 326px;
+  }
+
+  &__title{
+    display: flex;
+    flex-direction: column;
+    color: $red;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 39px;
+    span:nth-child(1){
+      font-size: 35px;
+      font-weight: 300;
+      letter-spacing: -0.55px;
+    }
+    span:nth-child(2){
+      font-size: 30px;
+      font-weight: 300;
+      line-height: 30px;
+    }
+  }
+  &__description{
+    color: $black;
+    font-size: 20px;
+    letter-spacing: -0.16px;
+    margin-bottom: 40px;
+  }
+}
+
+.masonry{
+  * + &__description{
+    margin-top: 42px;
+  }
+}
+
+.visible{
+  display: none;
+}
+
+
+@media screen and (max-width: 1199px) {
+  .masonry{
+    &__asside{
+      margin-left: 20px;
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .masonry{
+    flex-direction: column;
+    &__asside{
+      margin-left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .grid{
+      width: 100%;
+      max-width: 775px;
+      margin: 20px auto;
+    }
+  }
+  .hidden{
+    display: none;
+  }
+  .visible{
+    display: block;
+  }
+  .position{
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 820px) {
+  .masonry{
+    .grid{
+      width: 100%;
+      max-width: 515px;
+      margin: 20px auto;
+    }
+  }
+}
+@media screen and (max-width: 540px) {
+  .masonry{
+    &__title{
+      font-size: 40px;
+      span:nth-child(1){
+        font-size: 24px;
+        letter-spacing: normal;
+      }
+      span:nth-child(2){
+        font-size: 24px;
+      }
+    }
+    &__description{
+      font-size: 16px;
+      letter-spacing: normal;
+    }
+  }
+}

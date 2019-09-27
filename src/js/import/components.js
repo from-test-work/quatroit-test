@@ -1,0 +1,5 @@
+import "%components%/recomendation/recomendation"
+import "%components%/technology/technology"
+import "%components%/grid/grid"
+import "%components%/translator/translator"
+import "%components%/lenguage-list/lenguage-list"

@@ -1,0 +1,236 @@
+.load-block{
+  position: relative;
+  width: rem(974);
+  height: rem(226);
+  border-top: 1px solid $red;
+  border-bottom: 1px solid $red;
+  border-right: 1px solid $red;
+
+  left: calc(50% + 12px);
+  transform: translateX(-50%);
+  &__indent{
+    position: absolute;
+    width: rem(20);
+    height: 100%;
+  }
+
+
+  &__indent-frontf:before{
+    position: absolute;
+    content: '';
+    top: calc(50% - 4px);
+    width: 0;
+    height: 0;
+    left: -1px;
+    border-top: 16px solid $red;
+    border-left: 16px solid transparent;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  &__indent-frontf:after{
+    position: absolute;
+    content: '';
+    top: calc(50% + 4px);
+    width: 0;
+    height: 0;
+    left: -1px;
+    border-bottom: 16px solid $red;
+    border-left: 16px solid transparent;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+
+  &__indent-fronts:before{
+    position: absolute;
+    content: '';
+    width: 16px;
+    left: -1px;
+    top: 0;
+    height: calc(50% - 12px);
+    background: $red;
+    z-index: 1;
+  }
+  &__indent-fronts:after{
+    position: absolute;
+    content: '';
+    width: 16px;
+    left: -1px;
+    bottom: 0;
+    height: calc(50% - 12px);
+    background: $red;
+    z-index: 1;
+  }
+
+
+  &__indent-backf:before {
+    position: absolute;
+    content: '';
+    top: calc(50% - 4px);
+    width: 0;
+    height: 0;
+    left: 0;
+    border-top: 16px solid $white;
+    border-left: 16px solid transparent;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+  &__indent-backf:after {
+    position: absolute;
+    content: '';
+    top: calc(50% + 4px);
+    width: 0;
+    height: 0;
+    left: 0;
+    border-bottom: 16px solid $white;
+    border-left: 16px solid transparent;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  &__indent-backs:before {
+    position: absolute;
+    content: '';
+    width: 16px;
+    left: 0;
+    top: 0;
+    height: calc(50% - 12px);
+    background: $white;
+    z-index: 2;
+  }
+  &__indent-backs:after {
+    position: absolute;
+    content: '';
+    width: 16px;
+    left: 0;
+    bottom: 0;
+    height: calc(50% - 12px);
+    background: $white;
+    z-index: 2;
+  }
+
+  &__wrapp{
+    margin: 0 0 0 rem(16);
+    background: $white;
+    width: calc(100% - 16px);
+    height: 100%;
+  }
+
+  &__cnt{
+    padding: rem(35) rem(30) 0 rem(35);
+    display: flex;
+  }
+}
+
+.load-block{
+  &__about{
+    display: flex;
+    flex-direction: column;
+    width: rem(393);
+  }
+  &__title{
+    color: $red;
+    font-size: rem(22);
+    font-weight: 300;
+    line-height: 23.99px;
+  }
+  &__text{
+    color: lighten($black, 20.00);
+    font-size: rem(15);
+    font-weight: 300;
+    line-height: rem(28);
+    margin-top: rem(28);
+  }
+
+  .form {
+    padding-top: rem(5);
+    padding-left: rem(1);
+    input, textarea {
+      font-size: rem(14);
+      letter-spacing: -0.1px;
+    }
+  }
+  .form-load{
+    display: flex;
+  }
+  .form-item{
+    width: rem(230);
+  }
+  .form-item + .form-item{
+    margin-left: rem(30);
+  }
+  .form-input-wrapp{
+    height: rem(90);
+  }
+  .form-input-wrapp label span{
+    position: relative;
+    display: block;
+    &:before{
+      position: absolute;
+      content: '';
+      right: 0;
+      top: rem(4);
+      width: rem(10);
+      height: rem(16);
+      background-size: rem(10) rem(16);
+      background: url("../../../img/content/next.png");
+    }
+  }
+  .form-input-wrapp + *{
+    margin-top: rem(10);
+  }
+}
+
+
+@media screen and (max-width: 991px) {
+  .load-block{
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    left: 0;
+    transform: translateX(0);
+    &__cnt{
+      display: flex;
+      flex-direction: column;
+      padding: rem(35) rem(30) rem(35) rem(35);
+    }
+    &__about{
+      width: 100%;
+    }
+    &__text{
+      margin-top: rem(5);
+    }
+
+  }
+  .load-block .form-load {
+    width: 100%;
+    justify-content: center;
+  }
+  .load-block .form{
+    padding-top: rem(20);
+  }
+}
+@media screen and (max-width: 767px) {
+  .load-block{
+    &__cnt{
+      padding: rem(35) rem(20) rem(35) rem(20);
+    }
+  }
+
+}
+@media screen and (max-width: 540px) {
+  .load-block .form-load{
+    flex-direction: column;
+    align-items: center;
+  }
+  .load-block .form-item{
+    width: 100%;
+  }
+  .load-block .form-item + .form-item{
+    margin-left: 0;
+  }
+  .load-btn{
+    margin: 0 auto;
+    width: 100%;
+  }
+}
