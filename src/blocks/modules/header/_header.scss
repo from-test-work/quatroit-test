@@ -5,12 +5,10 @@ $cnt-width: 447px;
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  //height: 100vh;
   padding: rem(30) 0 rem(45);
   position: relative;
   .container {
     max-width: 1208px;
-    //max-width: initial;
   }
 
   &__top {
@@ -181,11 +179,3 @@ $cnt-width: 447px;
     }
   }
 }
-
-
-
-
-@media screen and (max-width: 1199px) {}
-@media screen and (max-width: 991px) {}
-@media screen and (max-width: 767px) {}
-@media screen and (max-width: 540px) {}

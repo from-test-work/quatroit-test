@@ -38,33 +38,6 @@ $background: $white;
       width: 100%;
       bottom: -16px;
     }
-    //.form-validationIcon-left {
-    //  position: absolute;
-    //  top: 50%;
-    //  width: 0;
-    //  height: 0;
-    //  border-top: 5px solid transparent;
-    //  border-left: 8px solid $red;
-    //  border-bottom: 5px solid transparent;
-    //  display: block;
-    //  transform: translateY(-50%);
-    //  z-index: 1;
-    //  &:before{
-    //    position: absolute;
-    //    content: '';
-    //    top: 50%;
-    //    left: -10px;
-    //    width: 0;
-    //    height: 0;
-    //    border-top: 5px solid transparent;
-    //    border-left: 8px solid $white;
-    //    border-bottom: 5px solid transparent;
-    //    display: block;
-    //    transform: translateY(-50%);
-    //    z-index: 2;
-    //  }
-    //}
-
     .form-validationIcon-left {
       left: $form-validationIcon--pull-left;
     }
