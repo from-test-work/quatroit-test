@@ -9,9 +9,7 @@ mixin event-block3(data)
                 .event-block__title.event-block__footer-text Задайте их нашему&nbsp;консультанту:
 
                 form.form.form3(name='fastTranslate',
-                    method='POST',
-                    data-netlify-recaptcha='true',
-                    data-netlify='true')
+                    method='POST')
                     .form-group
                         label
                             input.form-input(type='text' name='name' placeholder='Введите имя:')
@@ -24,5 +22,4 @@ mixin event-block3(data)
                         label
                             textarea.form-textarea( placeholder='Ваш вопрос:')
                             span.input-icon.textarea-icon_left
-                    div(data-netlify-recaptcha='false')
                     button.btn(type='submit') Заказать устный перевод

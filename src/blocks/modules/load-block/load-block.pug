@@ -14,9 +14,7 @@ mixin load-block(data)
                     .load-block__title Узнайте, как быстро будут переведены ваши документы.
                     .load-block__text Загрузите необходимый файл, и наши специалисты сообщат вам ответ в течение 5 минут.
                 form.form.form-load(name='fastTranslate',
-                    method='POST',
-                    data-netlify-recaptcha='true',
-                    data-netlify='true')
+                    method='POST')
                     .form-item
                         .form-group
                             label
@@ -30,7 +28,6 @@ mixin load-block(data)
                             label
                                 input.form-input(type='email' name='email' placeholder='Введите e-mail:')
                                 span.input-icon.input-icon_left
-                        div(data-netlify-recaptcha='true')
                     .form-item
                         .form-input-wrapp.loadFile
                             input#files(type='file', name='file')
